@@ -13,6 +13,55 @@ fix: annoying problem of almost invisible text in stderr */
   background-color: #c9b04e; /* muted yellow - dark text stays legible, unlike the dark theme's red */
 }
 
+/* galaxalabs customisation - core's 16-colour ANSI foregrounds are tuned for white; darkened to >= 4.5:1 on the error background */
+.jp-RenderedText pre .ansi-red-fg {
+  color: #921915;
+}
+
+.jp-RenderedText pre .ansi-green-fg {
+  color: #00562b;
+}
+
+.jp-RenderedText pre .ansi-yellow-fg {
+  color: #59480e;
+}
+
+.jp-RenderedText pre .ansi-blue-fg {
+  color: #03498e;
+}
+
+.jp-RenderedText pre .ansi-magenta-fg {
+  color: #7d2473;
+}
+
+.jp-RenderedText pre .ansi-cyan-fg {
+  color: #1c5152;
+}
+
+.jp-RenderedText pre .ansi-red-intense-fg {
+  color: #6a1a1d;
+}
+
+.jp-RenderedText pre .ansi-green-intense-fg {
+  color: #004116;
+}
+
+.jp-RenderedText pre .ansi-yellow-intense-fg {
+  color: #493307;
+}
+
+.jp-RenderedText pre .ansi-blue-intense-fg {
+  color: #00376f;
+}
+
+.jp-RenderedText pre .ansi-magenta-intense-fg {
+  color: #5d1d57;
+}
+
+.jp-RenderedText pre .ansi-cyan-intense-fg {
+  color: #103e3e;
+}
+
 /* stylelint-disable selector-class-pattern */
 .cm-s-jupyter .CodeMirror-activeline-background {
   background: #c4c4c4; /* one step below the active editor background */
@@ -87,24 +136,6 @@ fix: annoying problem of almost invisible text in stderr */
 /* override - settings restore button */
 .jp-SettingsHeader-buttonbar > .jp-RestoreButton {
   color: var(--jp-content-link-color);
-}
-
-/* override - output area scrolling fixes - related to output area 
- * showing unexpected and unwanted scrollbar */
-.jp-OutputArea-child,
-.jp-OutputArea-output,
-.jp-Cell-outputArea,
-.jp-OutputArea-output.jp-OutputArea-executeResult {
-  max-height: none !important;
-  overflow: visible !important;
-}
-
-.jp-Cell.jp-mod-outputsScrolled .jp-Cell-outputArea {
-  max-height: none !important;
-}
-
-.jp-OutputArea {
-  overflow: visible !important;
 }
 
 /* override - height of the text in launcher card */

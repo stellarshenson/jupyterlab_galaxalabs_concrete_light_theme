@@ -10,7 +10,13 @@ test.use({ autoGoto: false });
 
 const THEME_NAME = 'GalaxaLabs Concrete Light Theme';
 
-const VARIABLES_CSS = path.join(__dirname, '..', '..', 'style', 'variables.css');
+const VARIABLES_CSS = path.join(
+  __dirname,
+  '..',
+  '..',
+  'style',
+  'variables.css'
+);
 
 const NOTEBOOK = JSON.stringify({
   cells: [
@@ -130,7 +136,9 @@ function toHex(color: string): string {
     );
   }
   if (/^#[0-9a-f]{3}$/.test(value)) {
-    return '#' + value[1] + value[1] + value[2] + value[2] + value[3] + value[3];
+    return (
+      '#' + value[1] + value[1] + value[2] + value[2] + value[3] + value[3]
+    );
   }
   return value;
 }
