@@ -4,6 +4,13 @@
 
 <!-- <END NEW CHANGELOG ENTRY> -->
 
+## [1.0.14] - 2026-09-05
+
+### Changed
+
+- Theme menu entry renamed to `Galaxa Light Theme - Concrete`, which groups the four sibling themes into one contiguous block in the theme picker. Only the display name registered with `IThemeManager` changes - the repository, the npm package and the PyPI distribution keep their identifiers
+- Package and plugin descriptions now name the dark sibling by its new menu entry, `Galaxa Dark Theme - Concrete`
+
 ## [1.0.13] - 2026-09-05
 
 ### Added
