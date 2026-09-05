@@ -1,6 +1,6 @@
 {
     "name": "galaxalabs_jupyterlab_concrete_light_theme",
-    "version": "1.0.4",
+    "version": "1.0.12",
     "description": "Light neutral-gray theme in the Win95 light-gray convention, the light counterpart of the GalaxaLabs Concrete Dark Theme (Darcula lineage), designed to reduce eye strain",
     "keywords": [
         "jupyter",
@@ -97,8 +97,6 @@
         "dist",
         "coverage",
         "**/*.d.ts",
-        "tests",
-        "**/__tests__",
         "ui-tests"
     ],
     "eslintConfig": {

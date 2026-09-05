@@ -203,8 +203,12 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-content-font-color1: #262626; /* code, galaxalabs customisation */
   --jp-content-font-color2: #363636; /* 4.5:1 on layout2 */
   --jp-content-font-color3: #434343; /* 4.5:1 on layout2 */
-  --jp-content-link-color: #214664; /* galaxalabs customisation - md-blue-300 hue, darkened for the gray */
-  --jp-content-link-visited-color: var(--md-purple-700);
+  --jp-content-link-color: #1b3952; /* brand hue; core does not repaint links inside an
+     alert panel, so this has to clear 4.5:1 on the darkest one (error-color3) as well as on
+     the page - 4.9:1 and 7.5:1 */
+  --jp-content-link-hover-color: #122737; /* galaxalabs customisation - the underline is now permanent,
+     so hover needs its own signal; 9.5:1 on layout0 and a 1.6:1 darkening from the resting link */
+  --jp-content-link-visited-color: #4e2461; /* same floor as the resting link, was --md-purple-700 */
   --jp-content-font-family:
     -apple-system, blinkmacsystemfont, 'Segoe UI', helvetica, arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -279,22 +283,28 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-accent-color3: var(--md-green-100);
 
   /* State colors (warn, error, success, info) - galaxalabs customisation - muted to the palette rule (hue kept, saturation <= 55 percent, 4.5:1 / 6:1 on layout0) */
+
+  /* galaxalabs customisation - color2 and color3 paint the four markdown callouts. Both are
+     spread in CIELAB lightness (panels 79 / 75.5 / 72 / 68.5, borders 52 / 44 / 36 / 28) so the
+     four panels stay separable when hue is unavailable: under simulated deuteranopia they read
+     as a light-to-dark ladder instead of three identical khaki blocks. Every panel sits below
+     the page luminance, and color0 clears 4.5:1 on its own panel. */
   --jp-warn-color0: #68381e;
   --jp-warn-color1: #774e23;
-  --jp-warn-color2: var(--md-orange-300);
-  --jp-warn-color3: var(--md-orange-100);
-  --jp-error-color0: #7e2525;
+  --jp-warn-color2: #9b754e; /* alert border, CIELAB L* 52, 2.4:1 on color3 */
+  --jp-warn-color3: #d2c1af; /* alert panel, CIELAB L* 79.0 */
+  --jp-error-color0: #6d2020; /* alert and icon text, 4.6:1 on color3 */
   --jp-error-color1: #9f2e2e;
-  --jp-error-color2: var(--md-red-300);
-  --jp-error-color3: var(--md-red-100);
+  --jp-error-color2: #633; /* alert border, CIELAB L* 28, 4.2:1 on color3 */
+  --jp-error-color3: #c79c9c; /* alert panel, CIELAB L* 68.3 */
   --jp-success-color0: #174f1b;
   --jp-success-color1: #27632a;
-  --jp-success-color2: var(--md-green-300);
-  --jp-success-color3: var(--md-green-100);
-  --jp-info-color0: #164b4d;
+  --jp-success-color2: #3b743e; /* alert border, CIELAB L* 44, 2.9:1 on color3 */
+  --jp-success-color3: #99c59c; /* alert panel, CIELAB L* 75.5 */
+  --jp-info-color0: #17494f; /* alert and icon text, 4.7:1 on color3 */
   --jp-info-color1: #1e5f66;
-  --jp-info-color2: var(--md-cyan-300);
-  --jp-info-color3: var(--md-cyan-100);
+  --jp-info-color2: #305c60; /* alert border, CIELAB L* 36, 3.5:1 on color3 */
+  --jp-info-color3: #8bb9bd; /* alert panel, CIELAB L* 72.1 */
 
   /* Cell specific styles */
 
@@ -373,10 +383,16 @@ all of MD as it is not optimized for dense, information rich UIs.
     --jp-brand-color0
   ); /* galaxalabs customisation, added as of JL4.3, hover color for + button */
 
-  --jp-accept-color-active: var(--jp-brand-color0);
-  --jp-warn-color-normal: var(--md-red-700);
-  --jp-warn-color-hover: var(--md-red-800);
-  --jp-warn-color-active: var(--md-red-900);
+  --jp-accept-color-active: #1c3b54; /* the press step, 10 CIELAB L* below hover; core
+     styles hover and active separately and brand-color0 in both left them identical */
+
+  /* galaxalabs customisation - the destructive-button chain kept stock Material red
+     while the error scale beside it was muted; repointed so Restart Kernel, Shut Down
+     and Delete match the theme. White label reads 7.2:1 on normal, 9.6:1 on active. */
+  --jp-warn-color-normal: var(--jp-error-color1);
+  --jp-warn-color-hover: var(--jp-error-color0);
+  --jp-warn-color-active: #4f1717; /* the press step, 7.8 CIELAB L* below hover; core styles
+     hover and active separately and they would otherwise be indistinguishable */
   --jp-reject-color-normal: var(--md-grey-600);
   --jp-reject-color-hover: var(--md-grey-700);
   --jp-reject-color-active: var(--md-grey-800);

@@ -10,6 +10,13 @@ test.use({ autoGoto: false });
 
 const THEME_NAME = 'GalaxaLabs Concrete Light Theme';
 
+// The file browser lists galata's per-test directories with relative "Modified" times
+// that differ between runs; two clean-venv runs an hour apart diverged past the 2 percent
+// tolerance. Hiding only that column keeps the row fills, the alternating stripe and the
+// selected-row highlight in frame and under test.
+const VOLATILE_COLUMN_HIDDEN =
+  '.jp-DirListing-itemModified { visibility: hidden; }';
+
 const VARIABLES_CSS = path.join(
   __dirname,
   '..',
@@ -181,6 +188,8 @@ test('should apply the theme to the launcher', async ({ page }) => {
   );
   expect(toHex(layoutColor1)).toEqual(themeLayoutColor1());
 
+  await page.addStyleTag({ content: VOLATILE_COLUMN_HIDDEN });
+
   expect(await page.screenshot({ fullPage: true })).toMatchSnapshot(
     'launcher.png'
   );
@@ -200,6 +209,8 @@ test('should render a notebook with the theme', async ({ page }) => {
   await page.theme.setTheme(THEME_NAME);
 
   await expect(page.locator('.jp-Notebook')).toBeVisible();
+
+  await page.addStyleTag({ content: VOLATILE_COLUMN_HIDDEN });
 
   expect(await page.screenshot({ fullPage: true })).toMatchSnapshot(
     'notebook.png'
