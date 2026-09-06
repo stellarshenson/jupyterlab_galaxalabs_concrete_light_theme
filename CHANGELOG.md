@@ -4,6 +4,13 @@
 
 <!-- <END NEW CHANGELOG ENTRY> -->
 
+## [1.0.16] - 2026-09-06
+
+### Changed
+
+- Renamed from Concrete to Titanium throughout: the GitHub repository, the npm package, the PyPI distribution, the Python module and the theme menu entry, which is now `Galaxa Light Theme - Titanium`. The previous distribution `galaxalabs_jupyterlab_concrete_light_theme` is frozen at 1.0.14 and receives no further releases; installations of it must be replaced rather than upgraded
+- Colourful-tab accents no longer inherit the tab extension's pastels, which were drawn for a white canvas. The six hues are kept and the chroma capped at CIELAB C\* 15, the ceiling this theme already uses for a large tinted surface, leaving the six separable at a minimum pairwise dE76 of 10.9 and every tab label above 6.9:1
+
 ## [1.0.14] - 2026-09-05
 
 ### Changed

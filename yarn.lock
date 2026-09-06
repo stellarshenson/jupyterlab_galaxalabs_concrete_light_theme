@@ -2650,9 +2650,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"galaxalabs_jupyterlab_concrete_light_theme@workspace:.":
+"galaxalabs_jupyterlab_titanium_light_theme@workspace:.":
   version: 0.0.0-use.local
-  resolution: "galaxalabs_jupyterlab_concrete_light_theme@workspace:."
+  resolution: "galaxalabs_jupyterlab_titanium_light_theme@workspace:."
   dependencies:
     "@jupyterlab/application": ^4.0.0
     "@jupyterlab/apputils": ^4.0.0

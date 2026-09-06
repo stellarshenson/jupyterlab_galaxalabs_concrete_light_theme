@@ -3214,9 +3214,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jupyterlab_galaxalabs_concrete_light_theme-ui-tests@workspace:.":
+"jupyterlab_galaxalabs_titanium_light_theme-ui-tests@workspace:.":
   version: 0.0.0-use.local
-  resolution: "jupyterlab_galaxalabs_concrete_light_theme-ui-tests@workspace:."
+  resolution: "jupyterlab_galaxalabs_titanium_light_theme-ui-tests@workspace:."
   dependencies:
     "@jupyterlab/galata": ^5.6.3
     "@playwright/test": ^1.60.0

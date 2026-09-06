@@ -1,6 +1,6 @@
 <!-- @import /home/lab/workspace/.claude/CLAUDE.md -->
 
-# jupyterlab_galaxalabs_concrete_light_theme Project Instructions
+# jupyterlab_galaxalabs_titanium_light_theme Project Instructions
 
 This file imports workspace-level configuration from `/home/lab/workspace/.claude/CLAUDE.md`.
 All workspace rules apply. Project-specific rules below strengthen or extend them.
@@ -21,11 +21,11 @@ The following workspace rules are STRICTLY ENFORCED for this project:
 
 ## Project Context
 
-JupyterLab theme extension providing a light neutral-gray colour scheme in the Win95 light-gray convention, the light counterpart of the GalaxaLabs Concrete Dark Theme (Darcula lineage). Current version 1.0.0.
+JupyterLab theme extension providing a light neutral-gray colour scheme in the Win95 light-gray convention, the light counterpart of the GalaxaLabs Titanium Dark Theme (Darcula lineage). Current version 1.0.0.
 
-- npm package: `galaxalabs_jupyterlab_concrete_light_theme`
-- PyPI package: `galaxalabs-jupyterlab-concrete-light-theme`
-- GitHub: `stellarshenson/jupyterlab_galaxalabs_concrete_light_theme`
+- npm package: `galaxalabs_jupyterlab_titanium_light_theme`
+- PyPI package: `galaxalabs-jupyterlab-titanium-light-theme`
+- GitHub: `stellarshenson/jupyterlab_galaxalabs_titanium_light_theme`
 - Use `make publish` to build and publish to both registries
 - Use `make install` for local development builds
 

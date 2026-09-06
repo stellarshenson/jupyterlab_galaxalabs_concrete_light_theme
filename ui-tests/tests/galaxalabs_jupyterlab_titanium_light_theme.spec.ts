@@ -8,7 +8,7 @@ import * as path from 'path';
  */
 test.use({ autoGoto: false });
 
-const THEME_NAME = 'Galaxa Light Theme - Concrete';
+const THEME_NAME = 'Galaxa Light Theme - Titanium';
 
 // The file browser lists galata's per-test directories with relative "Modified" times
 // that differ between runs; two clean-venv runs an hour apart diverged past the 2 percent
@@ -31,7 +31,7 @@ const NOTEBOOK = JSON.stringify({
       cell_type: 'markdown',
       metadata: {},
       source: [
-        '# Concrete Light Theme\n',
+        '# Titanium Light Theme\n',
         '\n',
         '- first item with `inline code`\n',
         '- second item\n',
@@ -100,17 +100,17 @@ const NOTEBOOK = JSON.stringify({
       outputs: [
         {
           ename: 'ValueError',
-          evalue: 'concrete is not a colour',
+          evalue: 'titanium is not a colour',
           output_type: 'error',
           traceback: [
             '\x1b[0;31m---------------------------------------------------------------------------\x1b[0m',
             '\x1b[0;31mValueError\x1b[0m                                Traceback (most recent call last)',
-            'Cell \x1b[0;32mIn[2], line 1\x1b[0m\n\x1b[0;32m----> 1\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mValueError\x1b[39;00m(\x1b[38;5;124m"\x1b[39m\x1b[38;5;124mconcrete is not a colour\x1b[39m\x1b[38;5;124m"\x1b[39m)\n',
-            '\x1b[0;31mValueError\x1b[0m: concrete is not a colour'
+            'Cell \x1b[0;32mIn[2], line 1\x1b[0m\n\x1b[0;32m----> 1\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mValueError\x1b[39;00m(\x1b[38;5;124m"\x1b[39m\x1b[38;5;124mtitanium is not a colour\x1b[39m\x1b[38;5;124m"\x1b[39m)\n',
+            '\x1b[0;31mValueError\x1b[0m: titanium is not a colour'
           ]
         }
       ],
-      source: ['raise ValueError("concrete is not a colour")']
+      source: ['raise ValueError("titanium is not a colour")']
     }
   ],
   metadata: {
@@ -172,7 +172,7 @@ test('should emit an activation console message', async ({ page }) => {
     logs.filter(
       s =>
         s ===
-        'JupyterLab extension galaxalabs_jupyterlab_concrete_light_theme is activated!'
+        'JupyterLab extension galaxalabs_jupyterlab_titanium_light_theme is activated!'
     )
   ).toHaveLength(1);
 });
