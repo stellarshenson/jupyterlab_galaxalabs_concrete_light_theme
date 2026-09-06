@@ -1,15 +1,15 @@
 {
-    "name": "galaxalabs_jupyterlab_concrete_light_theme",
-    "version": "1.0.14",
-    "description": "Light neutral-gray theme in the Win95 light-gray convention, the light counterpart of Galaxa Dark Theme - Concrete (Darcula lineage), designed to reduce eye strain",
+    "name": "galaxalabs_jupyterlab_titanium_light_theme",
+    "version": "1.0.16",
+    "description": "Light neutral-gray theme in the Win95 light-gray convention, the light counterpart of Galaxa Dark Theme - Titanium (Darcula lineage), designed to reduce eye strain",
     "keywords": [
         "jupyter",
         "jupyterlab",
         "jupyterlab-extension"
     ],
-    "homepage": "https://github.com/stellarshenson/jupyterlab_galaxalabs_concrete_light_theme",
+    "homepage": "https://github.com/stellarshenson/jupyterlab_galaxalabs_titanium_light_theme",
     "bugs": {
-        "url": "https://github.com/stellarshenson/jupyterlab_galaxalabs_concrete_light_theme/issues"
+        "url": "https://github.com/stellarshenson/jupyterlab_galaxalabs_titanium_light_theme/issues"
     },
     "license": "BSD-3-Clause",
     "author": {
@@ -25,7 +25,7 @@
     "types": "lib/index.d.ts",
     "repository": {
         "type": "git",
-        "url": "https://github.com/stellarshenson/jupyterlab_galaxalabs_concrete_light_theme.git"
+        "url": "https://github.com/stellarshenson/jupyterlab_galaxalabs_titanium_light_theme.git"
     },
     "scripts": {
         "build": "jlpm build:lib && jlpm build:labextension:dev",
@@ -37,7 +37,7 @@
         "clean": "jlpm clean:lib",
         "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
         "clean:lintcache": "rimraf .eslintcache .stylelintcache",
-        "clean:labextension": "rimraf galaxalabs_jupyterlab_concrete_light_theme/labextension galaxalabs_jupyterlab_concrete_light_theme/_version.py",
+        "clean:labextension": "rimraf galaxalabs_jupyterlab_titanium_light_theme/labextension galaxalabs_jupyterlab_titanium_light_theme/_version.py",
         "clean:all": "jlpm clean:lib && jlpm clean:labextension && jlpm clean:lintcache",
         "eslint": "jlpm eslint:check --fix",
         "eslint:check": "eslint . --cache --ext .ts,.tsx",
@@ -89,7 +89,7 @@
     },
     "jupyterlab": {
         "extension": true,
-        "outputDir": "galaxalabs_jupyterlab_concrete_light_theme/labextension",
+        "outputDir": "galaxalabs_jupyterlab_titanium_light_theme/labextension",
         "themePath": "style/index.css"
     },
     "eslintIgnore": [
